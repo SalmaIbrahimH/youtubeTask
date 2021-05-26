@@ -1,27 +1,24 @@
-# YoutubeTask
+# v i d b o x 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
+	v i d b o x is an angular application to dispaly list of videos in YouTube channel.
 
-## Development server
+# description 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+	Single page application using angular12.0.1 and bootsrap4.6 that view list of videos retrived from YouTube channel using videos API.
 
-## Code scaffolding
+# used APIs
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+	- video api
+	- search api
+	- in cashing use (shareReplay from Rjxs)
+	- in pagging (ngx-pagination)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Project status 
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+	single page application with 2 pages( home/ detials), the application cash the retrived list of videos using shareReplay so, I can search
+and goes between paging without calling the api each time.
+implement sort function to sort by (title/upload date)
+implement pipe to search on title
+spareted component for search box 
+navigate to detials page with the id of selected video to show all it's requied

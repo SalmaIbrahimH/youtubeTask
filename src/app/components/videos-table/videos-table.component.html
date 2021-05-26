@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div *ngIf="!itemslist.length && !sendedSearchText.length" class="text-center spinnere">
+    <app-spinner></app-spinner>
+  </div>
+
+
+
+  <div *ngIf="itemslist.length">
+    <table class="table responsive-table col-10 mx-auto">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th (click)="sort('title')" scope="col">Tittle</th>
+          <th (click)="sort('publishTime')" scope="col">Publish Date</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vid of itemslist| paginate: { itemsPerPage: count, currentPage: p } | search: sendedSearchText">
+          <td><img  src="{{vid.snippet.thumbnails.medium.url}}"></td>
+          <td class='titleCell'>{{vid.snippet.title}}</td>
+          <td>{{vid.snippet.publishTime |date}}</td>
+          <td><button class="btn btn-outline-secondary"(click)="navigateToDetails(vid)"  >Details</button></td>
+        </tr>
+
+      </tbody>
+    </table>
+    <div class="text-right">
+      <pagination-controls  (pageChange)="p= $event"></pagination-controls>
+    </div>
+
+  </div>
+</div>

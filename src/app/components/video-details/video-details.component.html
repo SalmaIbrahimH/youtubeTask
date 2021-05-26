@@ -1,0 +1,21 @@
+<app-spinner *ngIf="vidItem.length<1 && title"></app-spinner>
+<div class="container-fluid">
+  <img class="mx-auto d-block thumbnail" src="{{thumbnail}}">
+  <div class="row">
+    <h3 class="d-block mx-auto">{{title}}</h3>
+  </div>
+  <hr>
+  <div class="col-11 mx-auto d-flex justify-content-lg-center mt-5">
+
+    <h5 class="d-inline mx-5"> duration: {{vidItem[0].contentDetails.duration|convertISO8601ToMs}}</h5>
+    <div class="d-flex mx-5">
+      <h5 class="d-inline mx-2"><i class="fa fa-eye"></i> {{vidItem[0].statistics.viewCount}}</h5>
+      <h5 class="d-inline mx-2"><i class="fa fa-thumbs-up"></i> {{vidItem[0].statistics.likeCount}}</h5>
+    </div>
+  </div>
+  <hr class="col-11">
+  <div class="mt-5">
+    <h5 class=" mt-3">Uploded on {{uploadDate|date}}</h5>
+    <h4 class="text-center mt-3">{{description}}</h4>
+  </div>
+</div>

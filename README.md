@@ -16,9 +16,5 @@
 
 # Project status 
 
-	single page application with 2 pages( home/ detials), the application cash the retrived list of videos using shareReplay so, I can search
-and goes between paging without calling the api each time.
-implement sort function to sort by (title/upload date)
-implement pipe to search on title
-spareted component for search box 
-navigate to detials page with the id of selected video to show all it's requied
+	single page application with 2 pages( home/ detials), the application cash the retrived list of videos using shareReplay so,
+  I can search and goes between paging without calling the api each time.implement sort function to sort by (title/upload date)implement pipe to search on titlespareted component   for search box navigate to detials page with the id of selected video to show all it's requied
